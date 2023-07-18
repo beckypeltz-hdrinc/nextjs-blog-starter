@@ -1,10 +1,15 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-    reactStrictMode: true,
-  
-   // Add basePath
-    basePath: '/nextjs-blog-starter',
-  
+module.exports = {
+    images: {
+        
+        domains: ['beckypeltz-hdrinc.github.io'],
+      remotePatterns: [
+        {
+          protocol: 'https',
+          hostname: 'beckypeltz-hdrinc.github.io',
+          port: '',
+          pathname: '/nextjs-blog-starter/assets/blog/**',
+        },
+      ],
+    },
   }
-  
-  module.exports = nextConfig
